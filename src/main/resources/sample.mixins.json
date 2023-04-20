@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "io.github.forceload.${mod_id}.mixins",
+  "compatibilityLevel": "JAVA_${java}",
+  "mixins": [],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

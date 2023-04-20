@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "Fabric Mod Template",
+  "description": "Simple Mod Template for Fabric",
+  "authors": [
+    "Project Forceload"
+  ],
+  "contact": {
+    "homepage": "https://github.com/forceload",
+    "issues": "https://github.com/forceload/fabric-mod-template/issues",
+    "sources": "https://github.com/forceload/fabric-mod-template"
+  },
+  "license": "MIT License",
+  "icon": "assets/${mod_id}/textures/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "io.github.forceload.${mod_id}.SampleMod"
+      }
+    ]
+  },
+
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${fabricloader}",
+    "fabric": ">=${fabric_api}",
+    "fabric-language-kotlin": ">=${fabric_language_kotlin}",
+    "minecraft": ">=${minecraft}",
+    "java": ">=${java}"
+  }
+}
