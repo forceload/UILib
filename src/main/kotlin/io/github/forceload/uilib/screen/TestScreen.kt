@@ -21,6 +21,10 @@ class TestScreen(title: String) : UIScreen(title) {
                     clickerNumber++
                     // client!!.setScreen(TitleScreen())
                 }
+
+                frame {
+                    clickerNumber++
+                }
             }
 
             text("UI Clicker %s", 0) {

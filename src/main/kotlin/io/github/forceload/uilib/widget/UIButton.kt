@@ -20,13 +20,14 @@ class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
 
     override var eventCallback = mutableMapOf(
         "click" to genCallback { },
-        "tick" to genCallback { }
+        "tick" to genCallback { },
+        "frame" to genCallback { }
     )
 
     private lateinit var drawable: ButtonWidget
     fun generate() {
         val builder = ButtonWidget.builder(text) { _: ButtonWidget? ->
-            eventCallback["click"]?.let { it() }
+            eventCallback["click"]?.invoke(this)
         }
 
         drawable = builder.dimensions(
@@ -38,11 +39,13 @@ class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
 
     fun click(callback: UIButton.() -> Unit) { eventCallback["click"] = callback }
     override fun render(renderInfo: UIRenderInfo) {
+        eventCallback["frame"]?.invoke(this)
         // drawable.render(renderInfo.matrixStack, renderInfo.mousePos.x, renderInfo.mousePos.y, renderInfo.deltaTime)
     }
 
+    fun frame(callback: UIButton.() -> Unit) { eventCallback["frame"] = callback }
     override fun update(callback: UIButton.() -> Unit) { eventCallback["tick"] = callback }
-    override fun tick() { eventCallback["tick"]?.let { it() } }
+    override fun tick() { eventCallback["tick"]?.invoke(this) }
 
     override fun apply(uiScreen: UIScreen) {
         uiScreen.applyUI(drawable)

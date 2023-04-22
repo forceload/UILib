@@ -25,6 +25,8 @@ class UIText(var text: Text = defaultText): UIWidget<UIText> {
     )
 
     override fun render(renderInfo: UIRenderInfo) {
+        eventCallback["frame"]?.invoke(this)
+
         for (screen in screens) {
             if (centered) {
                 if (shadowed) {
@@ -52,8 +54,9 @@ class UIText(var text: Text = defaultText): UIWidget<UIText> {
         }
     }
 
+    fun frame(callback: UIText.() -> Unit) { eventCallback["frame"] = callback }
     override fun update(callback: UIText.() -> Unit) { eventCallback["tick"] = callback }
-    override fun tick() { eventCallback["tick"]?.let { it() } }
+    override fun tick() { eventCallback["tick"]?.invoke(this) }
 
     override fun apply(uiScreen: UIScreen) {
         screens.add(uiScreen)

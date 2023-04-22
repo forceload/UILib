@@ -19,7 +19,7 @@ class UIGroup: UIWidget<UIGroup> {
 
     override fun update(callback: UIGroup.() -> Unit) { eventCallback["tick"] = callback }
     override fun tick() {
-        eventCallback["tick"]?.let { it() }
+        eventCallback["tick"]?.invoke(this)
         for (child in children) { child.tick() }
     }
 
