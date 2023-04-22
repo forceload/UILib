@@ -23,7 +23,7 @@ class TestScreen(title: String) : UIScreen(title) {
                 }
 
                 frame {
-                    clickerNumber++
+                    // clickerNumber++
                 }
             }
 
