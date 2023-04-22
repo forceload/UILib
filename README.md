@@ -1,1 +1,2 @@
-# fabric-mod-template
+# UILib
+Simple Minecraft Fabric Mod Loader UI Library

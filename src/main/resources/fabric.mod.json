@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "version": "${version}",
-  "name": "Fabric Mod Template",
-  "description": "Simple Mod Template for Fabric",
+  "name": "UI Library",
+  "description": "Simple UI Library for Minecraft Fabric Mod Loader",
   "authors": [
     "Project Forceload"
   ],
   "contact": {
     "homepage": "https://github.com/forceload",
-    "issues": "https://github.com/forceload/fabric-mod-template/issues",
-    "sources": "https://github.com/forceload/fabric-mod-template"
+    "issues": "https://github.com/forceload/UILib/issues",
+    "sources": "https://github.com/forceload/UILib"
   },
   "license": "MIT License",
   "icon": "assets/${mod_id}/textures/icon.png",
@@ -19,7 +19,7 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "io.github.forceload.${mod_id}.SampleMod"
+        "value": "io.github.forceload.${mod_id}.UILib"
       }
     ]
   },
