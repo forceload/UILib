@@ -13,6 +13,8 @@ class UIObject {
         group.render(UIRenderInfo(matrixStack, Point2D(mouseX, mouseY), delta))
     }
 
-    fun addChild(uiWidget: UIWidget) = group.addChild(uiWidget)
+    fun tick() = group.tick()
+
+    fun addChild(uiWidget: UIWidget<*>) = group.addChild(uiWidget)
     fun apply(uiScreen: UIScreen) = group.apply(uiScreen)
 }

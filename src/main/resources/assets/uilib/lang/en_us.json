@@ -1,3 +1,5 @@
 {
-    "gui.${mod_id}.button_default": "Default Button"
+    "gui.${mod_id}.button_default": "Default Button",
+    "gui.${mod_id}.text_default": "Default Text",
+    "gui.${mod_id}.uitest": "UI Test"
 }

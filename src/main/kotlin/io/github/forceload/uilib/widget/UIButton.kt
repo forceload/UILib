@@ -8,15 +8,19 @@ import net.minecraft.client.gui.widget.ButtonWidget
 import net.minecraft.text.Text
 import java.awt.Dimension
 
-class UIButton: UIWidget {
-
-    var text: Text = Text.translatable("gui.${UILib.MOD_ID}.button_default")
+class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
+    companion object {
+        val defaultText = Text.translatable("gui.${UILib.MOD_ID}.button_default")
+    }
 
     var centered = true
     var position = Point2D(0, 0)
     var size: Dimension = Dimension(100, 100)
-    private var eventCallback = mutableMapOf(
-        "click" to genCallback { }
+    constructor(text: String): this(Text.translatable(text))
+
+    override var eventCallback = mutableMapOf(
+        "click" to genCallback { },
+        "tick" to genCallback { }
     )
 
     private lateinit var drawable: ButtonWidget
@@ -33,11 +37,12 @@ class UIButton: UIWidget {
     }
 
     fun click(callback: UIButton.() -> Unit) { eventCallback["click"] = callback }
-
-    private fun genCallback(callback: UIButton.() -> Unit) = callback
     override fun render(renderInfo: UIRenderInfo) {
-        drawable.render(renderInfo.matrixStack, renderInfo.mousePos.x, renderInfo.mousePos.y, renderInfo.deltaTime)
+        // drawable.render(renderInfo.matrixStack, renderInfo.mousePos.x, renderInfo.mousePos.y, renderInfo.deltaTime)
     }
+
+    override fun update(callback: UIButton.() -> Unit) { eventCallback["tick"] = callback }
+    override fun tick() { eventCallback["tick"]?.let { it() } }
 
     override fun apply(uiScreen: UIScreen) {
         uiScreen.applyUI(drawable)

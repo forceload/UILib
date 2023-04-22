@@ -1,3 +1,5 @@
 {
-    "gui.${mod_id}.button_default": "기본 버튼"
+    "gui.${mod_id}.button_default": "기본 버튼",
+    "gui.${mod_id}.text_default": "기본 텍스트",
+    "gui.${mod_id}.uitest": "UI 테스트"
 }

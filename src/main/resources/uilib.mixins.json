@@ -3,7 +3,9 @@
   "package": "io.github.forceload.${mod_id}.mixins",
   "compatibilityLevel": "JAVA_${java}",
   "mixins": [],
-  "client": [],
+  "client": [
+    "client.AccessibilityOptionsMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
