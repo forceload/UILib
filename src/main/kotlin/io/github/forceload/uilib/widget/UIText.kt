@@ -2,7 +2,7 @@ package io.github.forceload.uilib.widget
 
 import io.github.forceload.uilib.UILib
 import io.github.forceload.uilib.generator.UIScreen
-import io.github.forceload.uilib.wrapper.Point2D
+import io.github.forceload.uilib.util.Point2D
 import io.github.forceload.uilib.wrapper.UIRenderInfo
 import net.minecraft.client.gui.DrawableHelper.drawCenteredTextWithShadow
 import net.minecraft.client.gui.DrawableHelper.drawTextWithShadow
@@ -16,6 +16,7 @@ class UIText(var text: Text = defaultText): UIWidget<UIText> {
 
     var centered = true
     var shadowed = true
+    var deltaTime: Float = 0.0F
     var position = Point2D(0, 0)
     var color = 0xFFFFFF
     constructor(text: String): this(Text.translatable(text))
@@ -25,6 +26,7 @@ class UIText(var text: Text = defaultText): UIWidget<UIText> {
     )
 
     override fun render(renderInfo: UIRenderInfo) {
+        deltaTime = renderInfo.deltaTime
         eventCallback["frame"]?.invoke(this)
 
         for (screen in screens) {
@@ -54,9 +56,12 @@ class UIText(var text: Text = defaultText): UIWidget<UIText> {
         }
     }
 
-    fun frame(callback: UIText.() -> Unit) { eventCallback["frame"] = callback }
-    override fun update(callback: UIText.() -> Unit) { eventCallback["tick"] = callback }
-    override fun tick() { eventCallback["tick"]?.invoke(this) }
+    override fun frame(callback: UIText.() -> Unit) { eventCallback["frame"] = callback }
+    override fun tick(callback: UIText.() -> Unit) { eventCallback["tick"] = callback }
+    override fun tickUpdate() { eventCallback["tick"]?.invoke(this) }
+    override fun generate() {
+        //No generation code
+    }
 
     override fun apply(uiScreen: UIScreen) {
         screens.add(uiScreen)

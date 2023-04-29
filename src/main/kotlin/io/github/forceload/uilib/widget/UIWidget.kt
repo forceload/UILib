@@ -6,8 +6,10 @@ import io.github.forceload.uilib.wrapper.UIRenderInfo
 interface UIWidget<T> {
     var eventCallback: MutableMap<String, T.() -> Unit>
     fun render(renderInfo: UIRenderInfo)
-    fun update(callback: T.() -> Unit)
-    fun tick()
+    fun tick(callback: T.() -> Unit)
+    fun frame(callback: T.() -> Unit)
+    fun tickUpdate()
+    fun generate()
     fun apply(uiScreen: UIScreen)
     fun genCallback(callback: T.() -> Unit) = callback
 }

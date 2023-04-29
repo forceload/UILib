@@ -1,5 +1,8 @@
 {
     "gui.${mod_id}.button_default": "Default Button",
     "gui.${mod_id}.text_default": "Default Text",
-    "gui.${mod_id}.uitest": "UI Test"
+    "gui.${mod_id}.uitest": "UI Test",
+    "gui.${mod_id}.slider_default": "Default Slider",
+    "gui.${mod_id}.test.clicker": "UI Clicker",
+    "gui.${mod_id}.test.auto_clicker": "Auto Clicker"
 }

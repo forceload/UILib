@@ -1,6 +1,7 @@
 package io.github.forceload.uilib.generator
 
 import io.github.forceload.uilib.widget.UIButton
+import io.github.forceload.uilib.widget.UISlider
 import io.github.forceload.uilib.widget.UIText
 import net.minecraft.text.Text
 
@@ -26,6 +27,17 @@ class UIGenerator {
         val uiText = UIText(text)
 
         uiText.init()
+        uiText.generate()
         mainWidget.addChild(uiText)
+    }
+
+    fun slider(text: String, vararg args: Any, value: Double = 0.0, max: Double = 1.0, init: UISlider.() -> Unit) =
+        slider(Text.translatable(text, *args), value, max, init)
+    fun slider(text: Text = UISlider.defaultText, value: Double = 0.0, max: Double = 1.0, init: UISlider.() -> Unit) {
+        val uiSlider = UISlider(text, value, max)
+
+        uiSlider.init()
+        uiSlider.generate()
+        mainWidget.addChild(uiSlider)
     }
 }

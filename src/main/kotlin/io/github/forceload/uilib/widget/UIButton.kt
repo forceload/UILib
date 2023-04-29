@@ -2,7 +2,7 @@ package io.github.forceload.uilib.widget
 
 import io.github.forceload.uilib.UILib
 import io.github.forceload.uilib.generator.UIScreen
-import io.github.forceload.uilib.wrapper.Point2D
+import io.github.forceload.uilib.util.Point2D
 import io.github.forceload.uilib.wrapper.UIRenderInfo
 import net.minecraft.client.gui.widget.ButtonWidget
 import net.minecraft.text.Text
@@ -14,6 +14,7 @@ class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
     }
 
     var centered = true
+    var deltaTime: Float = 0.0F
     var position = Point2D(0, 0)
     var size: Dimension = Dimension(100, 100)
     constructor(text: String): this(Text.translatable(text))
@@ -25,7 +26,7 @@ class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
     )
 
     private lateinit var drawable: ButtonWidget
-    fun generate() {
+    override fun generate() {
         val builder = ButtonWidget.builder(text) { _: ButtonWidget? ->
             eventCallback["click"]?.invoke(this)
         }
@@ -39,13 +40,14 @@ class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
 
     fun click(callback: UIButton.() -> Unit) { eventCallback["click"] = callback }
     override fun render(renderInfo: UIRenderInfo) {
+        deltaTime = renderInfo.deltaTime
         eventCallback["frame"]?.invoke(this)
         // drawable.render(renderInfo.matrixStack, renderInfo.mousePos.x, renderInfo.mousePos.y, renderInfo.deltaTime)
     }
 
-    fun frame(callback: UIButton.() -> Unit) { eventCallback["frame"] = callback }
-    override fun update(callback: UIButton.() -> Unit) { eventCallback["tick"] = callback }
-    override fun tick() { eventCallback["tick"]?.invoke(this) }
+    override fun frame(callback: UIButton.() -> Unit) { eventCallback["frame"] = callback }
+    override fun tick(callback: UIButton.() -> Unit) { eventCallback["tick"] = callback }
+    override fun tickUpdate() { eventCallback["tick"]?.invoke(this) }
 
     override fun apply(uiScreen: UIScreen) {
         uiScreen.applyUI(drawable)
