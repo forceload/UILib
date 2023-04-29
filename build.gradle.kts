@@ -1,7 +1,9 @@
 plugins {
     id("fabric-loom").version(Dependency.Loom.Version)
     kotlin("jvm").version(Dependency.Kotlin.Version)
+    id("org.jetbrains.dokka") version "1.8.10"
     `maven-publish`
+    signing
 }
 
 base { archivesName.set(project.extra["archives_base_name"] as String) }
@@ -72,6 +74,20 @@ tasks {
         targetCompatibility = javaVersion
         withSourcesJar()
     }
+
+    create<Jar>("dokkaJar") {
+        archiveClassifier.set("javadoc")
+        dependsOn("dokkaHtml")
+
+        from("$buildDir/dokka/html/") {
+            include("**")
+        }
+    }
+
+    create<Jar>("sourcesJar") {
+        archiveClassifier.set("sources")
+        from(sourceSets["main"].allSource)
+    }
 }
 
 publishing {
@@ -113,4 +129,18 @@ publishing {
             }
         }
     }
+
+    repositories {
+        maven {
+            url = uri("https://s01.oss.sonatype.org/content/repositories/releases/")
+            credentials {
+                username = "forceload"
+                password = System.getenv("SONATYPE_PASSWORD")
+            }
+        }
+    }
+}
+
+signing {
+    sign(publishing.publications["mavenJava"])
 }
