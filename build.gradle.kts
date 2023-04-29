@@ -1,6 +1,7 @@
 plugins {
     id("fabric-loom").version(Dependency.Loom.Version)
     kotlin("jvm").version(Dependency.Kotlin.Version)
+    `maven-publish`
 }
 
 base { archivesName.set(project.extra["archives_base_name"] as String) }
@@ -70,5 +71,46 @@ tasks {
         sourceCompatibility = javaVersion
         targetCompatibility = javaVersion
         withSourcesJar()
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = project.extra["maven_group"] as String
+            artifactId = project.extra["mod_id"] as String
+            version = project.extra["mod_version"] as String
+
+            from(components["java"])
+
+            pom {
+                name.set("UILib")
+                description.set("Simple Minecraft Fabric Mod Loader UI Library")
+                url.set("https://github.com/forceload/uilib")
+                licenses {
+                    license {
+                        name.set("MIT License")
+                        url.set("https://opensource.org/license/mit")
+                    }
+                }
+
+                developers {
+                    developer {
+                        id.set("forceload")
+                        name.set("Project Forceload")
+                        email.set("forceload.official@gmail.com")
+                        url.set("https://github.com/forceload")
+                        timezone.set("Asia/Seoul")
+                    }
+                }
+
+                val modId = project.extra["mod_id"] as String
+                scm {
+                    connection.set("scm:git:git://github.com/forceload/${modId}.git")
+                    developerConnection.set("scm:git:ssh://github.com:forceload/${modId}.git")
+                    url.set("https://github.com/forceload/${modId}")
+                }
+            }
+        }
     }
 }
