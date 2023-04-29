@@ -75,19 +75,6 @@ tasks {
         withSourcesJar()
     }
 
-    create<Jar>("dokkaJar") {
-        archiveClassifier.set("javadoc")
-        dependsOn("dokkaHtml")
-
-        from("$buildDir/dokka/html/") {
-            include("**")
-        }
-    }
-
-    create<Jar>("sourcesJar") {
-        archiveClassifier.set("sources")
-        from(sourceSets["main"].allSource)
-    }
 }
 
 publishing {
@@ -141,6 +128,3 @@ publishing {
     }
 }
 
-signing {
-    sign(publishing.publications["mavenJava"])
-}
