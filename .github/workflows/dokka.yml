@@ -28,7 +28,7 @@ jobs:
 
       - run: git tag ${{github.run_number}}
       - name: Execute Gradle build
-        run: ./gradlew :dokkaJar
+        run: ./gradlew dokkaJar
 
       - name: gh pages
         uses: peaceiris/actions-gh-pages@v3
