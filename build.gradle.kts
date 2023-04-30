@@ -128,3 +128,8 @@ publishing {
     }
 }
 
+java {
+    toolchain {
+        this.languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
