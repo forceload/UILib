@@ -56,6 +56,7 @@ $dokka.location:io.github.forceload.uilib.widget/UIButton.Companion/defaultText/
 $dokka.location:io.github.forceload.uilib.widget/UIButton///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/index.html
 $dokka.location:io.github.forceload.uilib.widget/UIButton/UIButton/#kotlin.String/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/-u-i-button.html
 $dokka.location:io.github.forceload.uilib.widget/UIButton/UIButton/#net.minecraft.text.Text/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/-u-i-button.html
+$dokka.location:io.github.forceload.uilib.widget/UIButton/_forcedInvisible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/_forced-invisible.html
 $dokka.location:io.github.forceload.uilib.widget/UIButton/apply/#io.github.forceload.uilib.generator.UIScreen/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/apply.html
 $dokka.location:io.github.forceload.uilib.widget/UIButton/centered/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/centered.html
 $dokka.location:io.github.forceload.uilib.widget/UIButton/click/#kotlin.Function1[io.github.forceload.uilib.widget.UIButton,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/click.html
@@ -69,8 +70,10 @@ $dokka.location:io.github.forceload.uilib.widget/UIButton/size/#/PointingToDecla
 $dokka.location:io.github.forceload.uilib.widget/UIButton/text/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/text.html
 $dokka.location:io.github.forceload.uilib.widget/UIButton/tick/#kotlin.Function1[io.github.forceload.uilib.widget.UIButton,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/tick.html
 $dokka.location:io.github.forceload.uilib.widget/UIButton/tickUpdate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/tick-update.html
+$dokka.location:io.github.forceload.uilib.widget/UIButton/visible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-button/visible.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/index.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/UIGroup/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/-u-i-group.html
+$dokka.location:io.github.forceload.uilib.widget/UIGroup/_forcedInvisible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/_forced-invisible.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/addChild/#io.github.forceload.uilib.widget.UIWidget[*]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/add-child.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/apply/#io.github.forceload.uilib.generator.UIScreen/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/apply.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/children/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/children.html
@@ -81,12 +84,14 @@ $dokka.location:io.github.forceload.uilib.widget/UIGroup/generate/#/PointingToDe
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/render/#io.github.forceload.uilib.wrapper.UIRenderInfo/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/render.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/tick/#kotlin.Function1[io.github.forceload.uilib.widget.UIGroup,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/tick.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/tickUpdate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/tick-update.html
+$dokka.location:io.github.forceload.uilib.widget/UIGroup/visible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/visible.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider.Companion///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-companion/index.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider.Companion/defaultMaxValue/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-companion/default-max-value.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider.Companion/defaultText/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-companion/default-text.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/index.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider/UISlider/#kotlin.String/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-u-i-slider.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider/UISlider/#net.minecraft.text.Text#kotlin.Double#kotlin.Double/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-u-i-slider.html
+$dokka.location:io.github.forceload.uilib.widget/UISlider/_forcedInvisible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/_forced-invisible.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider/apply/#io.github.forceload.uilib.generator.UIScreen/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/apply.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider/centered/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/centered.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider/deltaTime/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/delta-time.html
@@ -102,11 +107,13 @@ $dokka.location:io.github.forceload.uilib.widget/UISlider/tick/#kotlin.Function1
 $dokka.location:io.github.forceload.uilib.widget/UISlider/tickUpdate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/tick-update.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider/update/#kotlin.Function1[io.github.forceload.uilib.widget.UISlider,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/update.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider/value/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/value.html
+$dokka.location:io.github.forceload.uilib.widget/UISlider/visible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/visible.html
 $dokka.location:io.github.forceload.uilib.widget/UIText.Companion///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/-companion/index.html
 $dokka.location:io.github.forceload.uilib.widget/UIText.Companion/defaultText/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/-companion/default-text.html
 $dokka.location:io.github.forceload.uilib.widget/UIText///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/index.html
 $dokka.location:io.github.forceload.uilib.widget/UIText/UIText/#kotlin.String/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/-u-i-text.html
 $dokka.location:io.github.forceload.uilib.widget/UIText/UIText/#net.minecraft.text.Text/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/-u-i-text.html
+$dokka.location:io.github.forceload.uilib.widget/UIText/_forcedInvisible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/_forced-invisible.html
 $dokka.location:io.github.forceload.uilib.widget/UIText/apply/#io.github.forceload.uilib.generator.UIScreen/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/apply.html
 $dokka.location:io.github.forceload.uilib.widget/UIText/centered/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/centered.html
 $dokka.location:io.github.forceload.uilib.widget/UIText/color/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/color.html
@@ -121,7 +128,9 @@ $dokka.location:io.github.forceload.uilib.widget/UIText/shadowed/#/PointingToDec
 $dokka.location:io.github.forceload.uilib.widget/UIText/text/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/text.html
 $dokka.location:io.github.forceload.uilib.widget/UIText/tick/#kotlin.Function1[io.github.forceload.uilib.widget.UIText,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/tick.html
 $dokka.location:io.github.forceload.uilib.widget/UIText/tickUpdate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/tick-update.html
+$dokka.location:io.github.forceload.uilib.widget/UIText/visible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-text/visible.html
 $dokka.location:io.github.forceload.uilib.widget/UIWidget///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/index.html
+$dokka.location:io.github.forceload.uilib.widget/UIWidget/_forcedInvisible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/_forced-invisible.html
 $dokka.location:io.github.forceload.uilib.widget/UIWidget/apply/#io.github.forceload.uilib.generator.UIScreen/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/apply.html
 $dokka.location:io.github.forceload.uilib.widget/UIWidget/eventCallback/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/event-callback.html
 $dokka.location:io.github.forceload.uilib.widget/UIWidget/frame/#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/frame.html
@@ -130,6 +139,7 @@ $dokka.location:io.github.forceload.uilib.widget/UIWidget/generate/#/PointingToD
 $dokka.location:io.github.forceload.uilib.widget/UIWidget/render/#io.github.forceload.uilib.wrapper.UIRenderInfo/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/render.html
 $dokka.location:io.github.forceload.uilib.widget/UIWidget/tick/#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/tick.html
 $dokka.location:io.github.forceload.uilib.widget/UIWidget/tickUpdate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/tick-update.html
+$dokka.location:io.github.forceload.uilib.widget/UIWidget/visible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-widget/visible.html
 $dokka.location:io.github.forceload.uilib.wrapper////PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.wrapper/index.html
 $dokka.location:io.github.forceload.uilib.wrapper/UIRenderInfo///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.wrapper/-u-i-render-info/index.html
 $dokka.location:io.github.forceload.uilib.wrapper/UIRenderInfo/UIRenderInfo/#net.minecraft.client.gui.DrawContext#io.github.forceload.uilib.util.Point2D[kotlin.Int,kotlin.Int]#kotlin.Float/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.wrapper/-u-i-render-info/-u-i-render-info.html
