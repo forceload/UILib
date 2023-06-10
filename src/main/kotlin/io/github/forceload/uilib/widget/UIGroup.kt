@@ -3,7 +3,7 @@ package io.github.forceload.uilib.widget
 import io.github.forceload.uilib.generator.UIScreen
 import io.github.forceload.uilib.wrapper.UIRenderInfo
 
-class UIGroup: UIWidget<UIGroup> {
+class UIGroup : UIWidget<UIGroup> {
     var deltaTime: Float = 0.0F
     var children = ArrayList<UIWidget<*>>()
     fun addChild(widget: UIWidget<*>) {
@@ -14,6 +14,15 @@ class UIGroup: UIWidget<UIGroup> {
         "tick" to genCallback { },
         "frame" to genCallback { }
     )
+
+    override var visible: Boolean = true
+    override var _forcedInvisible: Boolean = false
+        set(value) {
+            field = value
+            for (child in children) {
+                child._forcedInvisible = value
+            }
+        }
 
     override fun render(renderInfo: UIRenderInfo) {
         deltaTime = renderInfo.deltaTime

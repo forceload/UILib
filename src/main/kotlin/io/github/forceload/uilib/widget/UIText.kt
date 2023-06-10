@@ -23,34 +23,39 @@ class UIText(var text: Text = defaultText): UIWidget<UIText> {
         "tick" to genCallback { }
     )
 
+    override var visible: Boolean = true
+    override var _forcedInvisible: Boolean = false
+
     override fun render(renderInfo: UIRenderInfo) {
         deltaTime = renderInfo.deltaTime
         eventCallback["frame"]?.invoke(this)
 
-        for (screen in screens) {
-            if (centered) {
-                if (shadowed) {
-                    renderInfo.drawContext.drawCenteredTextWithShadow(
-                        screen.textRenderer(), text,
-                        position.x, position.y, color
-                    )
+        if (visible && !_forcedInvisible) {
+            for (screen in screens) {
+                if (centered) {
+                    if (shadowed) {
+                        renderInfo.drawContext.drawCenteredTextWithShadow(
+                            screen.textRenderer(), text,
+                            position.x, position.y, color
+                        )
+                    } else {
+                        renderInfo.drawContext.drawCenteredTextWithShadow(
+                            screen.textRenderer(), text,
+                            position.x, position.y, color
+                        )
+                    }
                 } else {
-                    renderInfo.drawContext.drawCenteredTextWithShadow(
-                        screen.textRenderer(), text,
-                        position.x, position.y, color
-                    )
-                }
-            } else {
-                if (shadowed) {
-                    renderInfo.drawContext.drawTextWithShadow(
-                        screen.textRenderer(), text,
-                        position.x, position.y, color
-                    )
-                } else {
-                    renderInfo.drawContext.drawTextWithShadow(
-                        screen.textRenderer(), text,
-                        position.x, position.y, color
-                    )
+                    if (shadowed) {
+                        renderInfo.drawContext.drawTextWithShadow(
+                            screen.textRenderer(), text,
+                            position.x, position.y, color
+                        )
+                    } else {
+                        renderInfo.drawContext.drawTextWithShadow(
+                            screen.textRenderer(), text,
+                            position.x, position.y, color
+                        )
+                    }
                 }
             }
         }

@@ -1,6 +1,6 @@
 object Dependency {
     object Kotlin {
-        const val Version = "1.8.10"
+        const val Version = "1.8.21"
     }
 
     object Java {

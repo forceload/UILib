@@ -29,7 +29,6 @@ class UISlider(var text: Text = UIButton.defaultText, value: Double = 0.0, var m
         "valueUpdate" to genCallback { }
     )
 
-    private var tempValue = 0.0
     var centered = true
     var deltaTime: Float = 0.0F
     var position = Point2D(0, 0)
@@ -49,6 +48,12 @@ class UISlider(var text: Text = UIButton.defaultText, value: Double = 0.0, var m
     fun update(callback: UISlider.() -> Unit) {
         eventCallback["valueUpdate"] = callback
     }
+
+    override var visible: Boolean = true
+        set(value) { field = value; drawable.visible = value && !_forcedInvisible }
+
+    override var _forcedInvisible: Boolean = false
+        set(value) { field = value; drawable.visible = visible && !value }
 
     override fun generate() {
         drawable = UISliderWidget(

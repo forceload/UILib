@@ -25,6 +25,12 @@ class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
         "frame" to genCallback { }
     )
 
+    override var visible: Boolean = true
+        set(value) { field = value; drawable.visible = value && !_forcedInvisible }
+
+    override var _forcedInvisible: Boolean = false
+        set(value) { field = value; drawable.visible = visible && !value }
+
     private lateinit var drawable: ButtonWidget
     override fun generate() {
         val builder = ButtonWidget.builder(text) { _: ButtonWidget? ->
