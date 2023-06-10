@@ -5,7 +5,7 @@ import io.github.forceload.uilib.generator.UIScreen
 import io.github.forceload.uilib.generator.UIObject
 import io.github.forceload.uilib.util.Point2D
 import io.github.forceload.uilib.util.format
-import net.minecraft.client.util.math.MatrixStack
+import net.minecraft.client.gui.DrawContext
 import net.minecraft.text.Text
 import net.minecraft.util.Util
 import java.awt.Dimension
@@ -87,11 +87,11 @@ class TestScreen(title: String) : UIScreen(title) {
         ui.apply(this)
     }
 
-    override fun render(matrices: MatrixStack?, mouseX: Int, mouseY: Int, delta: Float) {
-        this.renderBackground(matrices)
-        matrices?.let { ui.render(it, mouseX, mouseY, delta) }
+    override fun render(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) {
+        this.renderBackground(context)
+        context.let { ui.render(it, mouseX, mouseY, delta) }
 
-        super.render(matrices, mouseX, mouseY, delta)
+        super.render(context, mouseX, mouseY, delta)
     }
 
     override fun tick() { ui.update() }

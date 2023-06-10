@@ -4,8 +4,6 @@ import io.github.forceload.uilib.UILib
 import io.github.forceload.uilib.generator.UIScreen
 import io.github.forceload.uilib.util.Point2D
 import io.github.forceload.uilib.wrapper.UIRenderInfo
-import net.minecraft.client.gui.DrawableHelper.drawCenteredTextWithShadow
-import net.minecraft.client.gui.DrawableHelper.drawTextWithShadow
 import net.minecraft.text.Text
 
 class UIText(var text: Text = defaultText): UIWidget<UIText> {
@@ -32,25 +30,27 @@ class UIText(var text: Text = defaultText): UIWidget<UIText> {
         for (screen in screens) {
             if (centered) {
                 if (shadowed) {
-                    drawCenteredTextWithShadow(
-                        renderInfo.matrixStack, screen.textRenderer(),
-                        text, position.x, position.y, color
+                    renderInfo.drawContext.drawCenteredTextWithShadow(
+                        screen.textRenderer(), text,
+                        position.x, position.y, color
                     )
                 } else {
-                    drawCenteredTextWithShadow(
-                        renderInfo.matrixStack, screen.textRenderer(),
-                        text, position.x, position.y, color)
+                    renderInfo.drawContext.drawCenteredTextWithShadow(
+                        screen.textRenderer(), text,
+                        position.x, position.y, color
+                    )
                 }
             } else {
                 if (shadowed) {
-                    drawTextWithShadow(
-                        renderInfo.matrixStack, screen.textRenderer(),
-                        text, position.x, position.y, color
+                    renderInfo.drawContext.drawTextWithShadow(
+                        screen.textRenderer(), text,
+                        position.x, position.y, color
                     )
                 } else {
-                    drawTextWithShadow(
-                        renderInfo.matrixStack, screen.textRenderer(),
-                        text, position.x, position.y, color)
+                    renderInfo.drawContext.drawTextWithShadow(
+                        screen.textRenderer(), text,
+                        position.x, position.y, color
+                    )
                 }
             }
         }

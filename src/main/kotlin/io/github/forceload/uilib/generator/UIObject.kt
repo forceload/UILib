@@ -4,13 +4,13 @@ import io.github.forceload.uilib.widget.UIGroup
 import io.github.forceload.uilib.widget.UIWidget
 import io.github.forceload.uilib.util.Point2D
 import io.github.forceload.uilib.wrapper.UIRenderInfo
-import net.minecraft.client.util.math.MatrixStack
+import net.minecraft.client.gui.DrawContext
 
 class UIObject {
 
     private val group = UIGroup()
-    fun render(matrixStack: MatrixStack, mouseX: Int, mouseY: Int, delta: Float) {
-        group.render(UIRenderInfo(matrixStack, Point2D(mouseX, mouseY), delta))
+    fun render(drawContext: DrawContext, mouseX: Int, mouseY: Int, delta: Float) {
+        group.render(UIRenderInfo(drawContext, Point2D(mouseX, mouseY), delta))
     }
 
     fun update() = group.tickUpdate()
