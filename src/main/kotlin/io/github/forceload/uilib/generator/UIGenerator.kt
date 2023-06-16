@@ -1,9 +1,11 @@
 package io.github.forceload.uilib.generator
 
 import io.github.forceload.uilib.widget.UIButton
+import io.github.forceload.uilib.widget.UIImage
 import io.github.forceload.uilib.widget.UISlider
 import io.github.forceload.uilib.widget.UIText
 import net.minecraft.text.Text
+import net.minecraft.util.Identifier
 
 class UIGenerator {
 
@@ -39,5 +41,13 @@ class UIGenerator {
         uiSlider.init()
         uiSlider.generate()
         mainWidget.addChild(uiSlider)
+    }
+
+    fun image(texture: Identifier, color: Int, init: UIImage.() -> Unit) {
+        val uiImage = UIImage(texture, color)
+
+        uiImage.init()
+        uiImage.generate()
+        mainWidget.addChild(uiImage)
     }
 }

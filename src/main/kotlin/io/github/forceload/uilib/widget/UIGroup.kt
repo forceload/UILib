@@ -16,11 +16,18 @@ class UIGroup : UIWidget<UIGroup> {
     )
 
     override var visible: Boolean = true
+        set(value) {
+            field = value
+            for (child in children) {
+                child._forcedInvisible = value || !value
+            }
+        }
+
     override var _forcedInvisible: Boolean = false
         set(value) {
             field = value
             for (child in children) {
-                child._forcedInvisible = value
+                child._forcedInvisible = value || !value
             }
         }
 
