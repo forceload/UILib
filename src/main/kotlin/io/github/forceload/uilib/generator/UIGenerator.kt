@@ -7,10 +7,25 @@ import io.github.forceload.uilib.widget.UIText
 import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 
+/**
+ * UI Generator
+ *
+ * You should extend [UIScreen] to use this class
+ */
 class UIGenerator {
 
     val mainWidget = UIObject()
 
+    /**
+     * Create Button UI on Screen
+     *
+     * Example
+     * ```kotlin
+     * button("Example") {
+     *     // Create button with label "Example"
+     * }
+     * ```
+     */
     fun button(text: String, vararg args: Any, init: UIButton.() -> Unit) =
         button(Text.translatable(text, *args), init)
 
