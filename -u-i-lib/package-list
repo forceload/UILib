@@ -5,6 +5,7 @@ $dokka.location:io.github.forceload.uilib.generator/UIGenerator///PointingToDecl
 $dokka.location:io.github.forceload.uilib.generator/UIGenerator/UIGenerator/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.generator/-u-i-generator/-u-i-generator.html
 $dokka.location:io.github.forceload.uilib.generator/UIGenerator/button/#kotlin.String#kotlin.Array[kotlin.Any]#kotlin.Function1[io.github.forceload.uilib.widget.UIButton,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.generator/-u-i-generator/button.html
 $dokka.location:io.github.forceload.uilib.generator/UIGenerator/button/#net.minecraft.text.Text#kotlin.Function1[io.github.forceload.uilib.widget.UIButton,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.generator/-u-i-generator/button.html
+$dokka.location:io.github.forceload.uilib.generator/UIGenerator/image/#net.minecraft.util.Identifier#kotlin.Int#kotlin.Function1[io.github.forceload.uilib.widget.UIImage,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.generator/-u-i-generator/image.html
 $dokka.location:io.github.forceload.uilib.generator/UIGenerator/mainWidget/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.generator/-u-i-generator/main-widget.html
 $dokka.location:io.github.forceload.uilib.generator/UIGenerator/slider/#kotlin.String#kotlin.Array[kotlin.Any]#kotlin.Double#kotlin.Double#kotlin.Function1[io.github.forceload.uilib.widget.UISlider,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.generator/-u-i-generator/slider.html
 $dokka.location:io.github.forceload.uilib.generator/UIGenerator/slider/#net.minecraft.text.Text#kotlin.Double#kotlin.Double#kotlin.Function1[io.github.forceload.uilib.widget.UISlider,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.generator/-u-i-generator/slider.html
@@ -85,6 +86,18 @@ $dokka.location:io.github.forceload.uilib.widget/UIGroup/render/#io.github.force
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/tick/#kotlin.Function1[io.github.forceload.uilib.widget.UIGroup,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/tick.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/tickUpdate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/tick-update.html
 $dokka.location:io.github.forceload.uilib.widget/UIGroup/visible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-group/visible.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/index.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/UIImage/#net.minecraft.util.Identifier#kotlin.Int/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/-u-i-image.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/_forcedInvisible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/_forced-invisible.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/apply/#io.github.forceload.uilib.generator.UIScreen/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/apply.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/eventCallback/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/event-callback.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/frame/#kotlin.Function1[io.github.forceload.uilib.widget.UIImage,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/frame.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/generate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/generate.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/position/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/position.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/render/#io.github.forceload.uilib.wrapper.UIRenderInfo/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/render.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/tick/#kotlin.Function1[io.github.forceload.uilib.widget.UIImage,kotlin.Unit]/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/tick.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/tickUpdate/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/tick-update.html
+$dokka.location:io.github.forceload.uilib.widget/UIImage/visible/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-image/visible.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider.Companion///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-companion/index.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider.Companion/defaultMaxValue/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-companion/default-max-value.html
 $dokka.location:io.github.forceload.uilib.widget/UISlider.Companion/defaultText/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.widget/-u-i-slider/-companion/default-text.html
