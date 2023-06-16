@@ -19,7 +19,7 @@ class UIGenerator {
     /**
      * Create Button UI on Screen
      *
-     * Example
+     * ## Example
      * ```kotlin
      * button("Example") {
      *     // Create button with label "Example"
@@ -38,6 +38,16 @@ class UIGenerator {
         mainWidget.addChild(button)
     }
 
+    /**
+     * Create Text on Screen
+     *
+     * ## Example
+     * ```kotlin
+     * button("Example") {
+     *     // Create text "Example"
+     * }
+     * ```
+     */
     fun text(text: String, vararg args: Any, init: UIText.() -> Unit) =
         text(Text.translatable(text, *args), init)
     fun text(text: Text = UIText.defaultText, init: UIText.() -> Unit) {
