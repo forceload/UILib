@@ -13,6 +13,16 @@ class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
         val defaultText = Text.translatable("gui.${UILib.MOD_ID}.button_default")
     }
 
+    /**
+     * Determines whether the button's coordinates are calculated based on the center of the button
+     *
+     * ## Example
+     * ```kotlin
+     * // This code centers the button on the screen
+     * position = Point2D(width / 2, height / 2)
+     * centered = true
+     * ```
+     */
     var centered = true
     var deltaTime: Float = 0.0F
     var position = Point2D(0, 0)

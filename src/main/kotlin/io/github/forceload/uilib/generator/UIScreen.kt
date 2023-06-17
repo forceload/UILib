@@ -7,6 +7,13 @@ import net.minecraft.client.gui.Selectable
 import net.minecraft.client.gui.screen.Screen
 import net.minecraft.text.Text
 
+/**
+ * This class is one of the most essential parts of using this library.
+ *
+ * ## Example
+ * ```kotlin
+ * ```
+ */
 open class UIScreen(title: Text?) : Screen(title) {
     constructor(title: String?) : this(Text.translatable(title))
 

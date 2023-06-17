@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier
  * UI Generator
  *
  * You should extend [UIScreen] to use this class
+ * @see [io.github.forceload.uilib.generator.UIScreen] See UIScreen if you want to see how to use this class correctly
  */
 class UIGenerator {
 
@@ -43,7 +44,7 @@ class UIGenerator {
      *
      * ## Example
      * ```kotlin
-     * button("Example") {
+     * text("Example") {
      *     // Create text "Example"
      * }
      * ```
@@ -58,6 +59,16 @@ class UIGenerator {
         mainWidget.addChild(uiText)
     }
 
+    /**
+     * Create Slider on Screen
+     *
+     * ## Example
+     * ```kotlin
+     * slider("Example", value = 5, max = 10) {
+     *     // Create a slider with text "Example", the current value 5, and the maximum value 10
+     * }
+     * ```
+     */
     fun slider(text: String, vararg args: Any, value: Double = 0.0, max: Double = 1.0, init: UISlider.() -> Unit) =
         slider(Text.translatable(text, *args), value, max, init)
     fun slider(text: Text = UISlider.defaultText, value: Double = 0.0, max: Double = 1.0, init: UISlider.() -> Unit) {
@@ -68,6 +79,9 @@ class UIGenerator {
         mainWidget.addChild(uiSlider)
     }
 
+    /**
+     * Still Working on
+     */
     fun image(texture: Identifier, color: Int, init: UIImage.() -> Unit) {
         val uiImage = UIImage(texture, color)
 
