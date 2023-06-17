@@ -1,7 +1,10 @@
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
+
 plugins {
     id("fabric-loom").version(Dependency.Loom.Version)
     kotlin("jvm").version(Dependency.Kotlin.Version)
-    id("org.jetbrains.dokka") version "1.8.10"
+    id("org.jetbrains.dokka") version Dependency.Dokka.Version
     `maven-publish`
     signing
 }
@@ -75,6 +78,18 @@ tasks {
         withSourcesJar()
     }
 
+    dokkaHtml.configure {
+        pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+            footerMessage = "© 2023 Forceload"
+            separateInheritedMembers = true
+        }
+    }
+}
+
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.dokka:dokka-base:${Dependency.Dokka.Version}")
+    }
 }
 
 publishing {

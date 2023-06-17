@@ -3,6 +3,8 @@ object Dependency {
         const val Version = "1.8.21"
     }
 
+    object Dokka { const val Version = "1.8.20" }
+
     object Java {
         const val Version = "17"
     }
