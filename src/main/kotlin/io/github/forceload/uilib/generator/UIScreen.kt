@@ -21,6 +21,8 @@ import net.minecraft.text.Text
  *                 centered = true
  *             }
  *         }
+ *
+ *         ui.apply(this) // Apply UI to this screen
  *     }
  *
  *     override fun render(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) {
