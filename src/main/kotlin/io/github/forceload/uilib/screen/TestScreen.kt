@@ -10,6 +10,9 @@ import net.minecraft.text.Text
 import net.minecraft.util.Util
 import java.awt.Dimension
 
+/**
+ * @suppress
+ */
 class TestScreen(title: String) : UIScreen(title) {
     private var clickerTime = 0
     private var clickerNumber = 0
@@ -29,7 +32,7 @@ class TestScreen(title: String) : UIScreen(title) {
                 frame {
                     if (clickerTime != 0) {
                         time += this.deltaTime / 20
-                        if (time > 1.0 / clickerTime) {
+                        if (time >= 1.0 / clickerTime) {
                             val temp = (time / (1.0 / clickerTime)).toInt()
                             clickerNumber += temp
 

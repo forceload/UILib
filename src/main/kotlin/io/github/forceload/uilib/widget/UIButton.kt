@@ -8,21 +8,36 @@ import net.minecraft.client.gui.widget.ButtonWidget
 import net.minecraft.text.Text
 import java.awt.Dimension
 
-class UIButton(var text: Text = defaultText): UIWidget<UIButton> {
+/**
+ *
+ *
+ * ## Example
+ * ```kotlin
+ * var buttonPressCount = 0
+ * button("Sample 0") {
+ *     // This code centers the button on the screen
+ *     position = Point2D(width / 2, height / 2)
+ *     centered = true
+ *
+ *     click {
+ *         // This code increases the <number> part of the text "Sample <number>" on the button by 1 when the button is clicked.
+ *         buttonPressCount++
+ *         text = Text.translatable("Sample ${buttonPressCount}")
+ *     }
+ * }
+ * ```
+ */
+class UIButton(text: Text = defaultText): UIWidget<UIButton> {
     companion object {
         val defaultText = Text.translatable("gui.${UILib.MOD_ID}.button_default")
     }
 
-    /**
-     * Determines whether the button's coordinates are calculated based on the center of the button
-     *
-     * ## Example
-     * ```kotlin
-     * // This code centers the button on the screen
-     * position = Point2D(width / 2, height / 2)
-     * centered = true
-     * ```
-     */
+    var text: Text = text
+        set(value) {
+            field = value
+            drawable.message = value
+        }
+
     var centered = true
     var deltaTime: Float = 0.0F
     var position = Point2D(0, 0)

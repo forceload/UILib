@@ -19,7 +19,7 @@ class UIGroup : UIWidget<UIGroup> {
         set(value) {
             field = value
             for (child in children) {
-                child._forcedInvisible = value || !value
+                child._forcedInvisible = _forcedInvisible || !value
             }
         }
 
@@ -27,7 +27,7 @@ class UIGroup : UIWidget<UIGroup> {
         set(value) {
             field = value
             for (child in children) {
-                child._forcedInvisible = value || !value
+                child._forcedInvisible = value || !visible
             }
         }
 
