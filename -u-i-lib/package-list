@@ -28,11 +28,6 @@ $dokka.location:io.github.forceload.uilib.generator/UIScreen/textRenderer/#/Poin
 $dokka.location:io.github.forceload.uilib.mixins.client////PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.mixins.client/index.html
 $dokka.location:io.github.forceload.uilib.mixins.client/AccessibilityOptionsMixin///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.mixins.client/-accessibility-options-mixin/index.html
 $dokka.location:io.github.forceload.uilib.mixins.client/AccessibilityOptionsMixin/AccessibilityOptionsMixin/#net.minecraft.client.gui.screen.Screen#net.minecraft.client.option.GameOptions/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.mixins.client/-accessibility-options-mixin/-accessibility-options-mixin.html
-$dokka.location:io.github.forceload.uilib.screen////PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.screen/index.html
-$dokka.location:io.github.forceload.uilib.screen/TestScreen///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.screen/-test-screen/index.html
-$dokka.location:io.github.forceload.uilib.screen/TestScreen/TestScreen/#kotlin.String/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.screen/-test-screen/-test-screen.html
-$dokka.location:io.github.forceload.uilib.screen/TestScreen/render/#net.minecraft.client.gui.DrawContext#kotlin.Int#kotlin.Int#kotlin.Float/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.screen/-test-screen/render.html
-$dokka.location:io.github.forceload.uilib.screen/TestScreen/tick/#/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.screen/-test-screen/tick.html
 $dokka.location:io.github.forceload.uilib.util////PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.util/index.html
 $dokka.location:io.github.forceload.uilib.util//format/kotlin.Double#kotlin.Int/PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.util/format.html
 $dokka.location:io.github.forceload.uilib.util/Point2D///PointingToDeclaration/-u-i-lib/io.github.forceload.uilib.util/-point2-d/index.html
@@ -169,7 +164,6 @@ $dokka.location:io.github.forceload.uilib/UILib/onInitialize/#/PointingToDeclara
 io.github.forceload.uilib
 io.github.forceload.uilib.generator
 io.github.forceload.uilib.mixins.client
-io.github.forceload.uilib.screen
 io.github.forceload.uilib.util
 io.github.forceload.uilib.widget
 io.github.forceload.uilib.widget.internal
