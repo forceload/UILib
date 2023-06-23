@@ -6,8 +6,7 @@ import io.github.forceload.uilib.generator.UIObject
 import io.github.forceload.uilib.util.Point2D
 import io.github.forceload.uilib.util.format
 import net.minecraft.client.gui.DrawContext
-import net.minecraft.client.gui.screen.TitleScreen
-import net.minecraft.client.gui.screen.option.AccessibilityOptionsScreen
+import net.minecraft.client.gui.screen.Screen
 import net.minecraft.text.Text
 import net.minecraft.util.Util
 import java.awt.Dimension
@@ -15,7 +14,7 @@ import java.awt.Dimension
 /**
  * @suppress
  */
-class TestScreen(title: String) : UIScreen(title) {
+class TestScreen(title: String, private val parent: Screen) : UIScreen(title) {
     private var clickerTime = 0
     private var clickerNumber = 0
 
@@ -93,7 +92,7 @@ class TestScreen(title: String) : UIScreen(title) {
     }
 
     override fun close() {
-        this.client?.setScreen(AccessibilityOptionsScreen(TitleScreen(), this.client!!.options))
+        this.client?.setScreen(parent)
     }
 
     override fun render(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) {

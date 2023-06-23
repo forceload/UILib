@@ -60,7 +60,7 @@ public abstract class AccessibilityOptionsMixin extends SimpleOptionsScreen {
         }).dimensions(this.width / 2 + 5, this.height - 27, 150, 20).build());
 
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("gui.uilib.uitest"), (button) -> {
-            UILib.INSTANCE.getClient().setScreen(new TestScreen("UI Test"));
+            UILib.INSTANCE.getClient().setScreen(new TestScreen("UI Test", this.client.currentScreen));
         }).dimensions(this.width / 2 + 155 - 60, 6, 60, 20).build());
     }
 }

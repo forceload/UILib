@@ -11,8 +11,8 @@ import net.minecraft.text.Text
  * UIScreen is one of the most essential parts of using this library
  *
  * ## Example
- * ```
- * class TestScreen(title: String) : UIScreen(title) {
+ * ```kotlin
+ * class TestScreen(title: String, private val parent: Screen) : UIScreen(title) {
  *     private var clickerTime = 0
  *     private var clickerNumber = 0
  *
@@ -90,7 +90,7 @@ import net.minecraft.text.Text
  *     }
  *
  *     override fun close() {
- *         this.client?.setScreen(AccessibilityOptionsScreen(TitleScreen(), this.client!!.options))
+ *         this.client?.setScreen(parent)
  *     }
  *
  *     override fun render(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) {
