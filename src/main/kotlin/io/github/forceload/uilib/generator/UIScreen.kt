@@ -11,30 +11,99 @@ import net.minecraft.text.Text
  * UIScreen is one of the most essential parts of using this library
  *
  * ## Example
- * ```kotlin
- * // This is a sample screen with a square button which says "Sample" in the center
- * class SampleScreen(title: String): Screen(title) {
+ * ```
+ * class TestScreen(title: String) : UIScreen(title) {
+ *     private var clickerTime = 0
+ *     private var clickerNumber = 0
+ *
+ *     private var intervalClicker = 0.0
+ *     private var realTime = Util.getMeasuringTimeMs()
+ *     private var time = 0.0
+ *
+ *     private lateinit var ui: UIObject
  *     override fun init() {
- *         ui = buildUI { //Build Main UI
- *             button("Sample") {
+ *         ui = buildUI {
+ *             button("gui.uilib.button_default") {
+ *                 size = Dimension(100, 100)
  *                 position = Point2D(width / 2, height / 2)
- *                 centered = true
+ *
+ *                 click { clickerNumber++ }
+ *                 frame {
+ *                     if (clickerTime != 0) {
+ *                         time += this.deltaTime / 20
+ *                         if (time >= 1.0 / clickerTime) {
+ *                             val temp = (time / (1.0 / clickerTime)).toInt()
+ *                             clickerNumber += temp
+ *
+ *                             time -= (1.0 / clickerTime) * temp
+ *                         }
+ *                     } else {
+ *                         time = 0.0
+ *                         realTime = Util.getMeasuringTimeMs()
+ *                     }
+ *                 }
+ *             }
+ *
+ *             text("UI Clicker %s", 0) {
+ *                 position = Point2D(width / 2, height / 2 + 55)
+ *                 tick {
+ *                     this.text = Text.translatable("gui.${UILib.MOD_ID}.test.clicker")
+ *                         .append(Text.translatable(" %s", clickerNumber))
+ *                 }
+ *             }
+ *
+ *             text("0.0") {
+ *                 position = Point2D(width / 2, height / 2 + 65)
+ *                 frame {
+ *                     this.text = Text.of("Real Time: ${
+ *                         ((Util.getMeasuringTimeMs() - realTime) / 1000.0).format(2)}")
+ *                 }
+ *             }
+ *
+ *             text("0.0") {
+ *                 position = Point2D(width / 2, height / 2 + 75)
+ *                 frame {
+ *                     this.text = Text.of("Difference: ${
+ *                         ((Util.getMeasuringTimeMs() - realTime) / 1000.0 - clickerNumber).format(2)}")
+ *                 }
+ *             }
+ *
+ *             var sliderText = Text.translatable("gui.${UILib.MOD_ID}.test.auto_clicker")
+ *                     .append(Text.translatable(" %s", intervalClicker.toInt()))
+ *
+ *             slider(sliderText, value = intervalClicker, max = 200.0) {
+ *                 position = Point2D(width / 2, height / 2 - 70)
+ *
+ *                 update {
+ *                     intervalClicker = this.value
+ *                     clickerTime = this.value.toInt()
+ *
+ *                     sliderText = Text.translatable("gui.${UILib.MOD_ID}.test.auto_clicker")
+ *                         .append(Text.translatable(" %s", intervalClicker.toInt()))
+ *
+ *                     this.text = sliderText
+ *                 }
  *             }
  *         }
  *
- *         ui.apply(this) // Apply UI to this screen
+ *         ui.apply(this)
+ *     }
+ *
+ *     override fun close() {
+ *         this.client?.setScreen(AccessibilityOptionsScreen(TitleScreen(), this.client!!.options))
  *     }
  *
  *     override fun render(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) {
  *         this.renderBackground(context)
- *         context.let { ui.render(it, mouseX, mouseY, delta) } // Render UI Components
+ *         context.let { ui.render(it, mouseX, mouseY, delta) }
  *
  *         super.render(context, mouseX, mouseY, delta)
  *     }
  *
- *     override fun tick() { ui.update() } // Update UI (Useless in this example)
+ *     override fun tick() { ui.update() }
  * }
  * ```
+ * You can see the results of this example in the `Accessibility Settings > UI Test` button
  */
 open class UIScreen(title: Text?) : Screen(title) {
     constructor(title: String?) : this(Text.translatable(title))

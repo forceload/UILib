@@ -6,6 +6,8 @@ import io.github.forceload.uilib.generator.UIObject
 import io.github.forceload.uilib.util.Point2D
 import io.github.forceload.uilib.util.format
 import net.minecraft.client.gui.DrawContext
+import net.minecraft.client.gui.screen.TitleScreen
+import net.minecraft.client.gui.screen.option.AccessibilityOptionsScreen
 import net.minecraft.text.Text
 import net.minecraft.util.Util
 import java.awt.Dimension
@@ -88,6 +90,10 @@ class TestScreen(title: String) : UIScreen(title) {
         }
 
         ui.apply(this)
+    }
+
+    override fun close() {
+        this.client?.setScreen(AccessibilityOptionsScreen(TitleScreen(), this.client!!.options))
     }
 
     override fun render(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) {
